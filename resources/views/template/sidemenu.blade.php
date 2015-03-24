@@ -26,6 +26,7 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
+            
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
@@ -35,7 +36,15 @@
                     <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
                 </ul>
             </li>
-            <li class="treeview active">
+            <li class="treeview active"><a href="{{ url('brands') }}">
+                    <i class="fa fa-th"></i> <span>Brands</span> <small class="label pull-right bg-green">new</small>
+                </a>
+            </li>
+            <li class="treeview active"><a href="../widgets.html">
+                    <i class="fa fa-th"></i> <span>Products</span> <small class="label pull-right bg-green">new</small>
+                </a>
+            </li>
+            <li class="treeview">
                 <a href="#">
                     <i class="fa fa-files-o"></i>
                     <span>Layout Options</span>
