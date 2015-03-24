@@ -14,6 +14,7 @@
 Route::get('home', 'HomeController@index');
 
 Route::controllers(['brands'=>'BrandsController']);
+Route::controllers(['products'=>'ProductsController']);
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

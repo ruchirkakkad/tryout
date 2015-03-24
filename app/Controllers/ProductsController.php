@@ -2,12 +2,12 @@
 
 use app\Http\Requests;
 use app\Controllers\Controller;
-use app\Models\Brand;
 use app\Models\Product;
+use app\Models\Brand;
 
 use Illuminate\Http\Request;
 
-class BrandsController extends Controller {
+class ProductsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -16,10 +16,8 @@ class BrandsController extends Controller {
 	 */
 	public function getIndex()
 	{
-		// $products = Brand::find(1)->products;
-		// dd(count($products));
-		$brands['brands'] = Brand::all();
-		return \View::make('brands.index',$brands);
+		$data['products'] = Product::all();
+		return \View::make('products.index',$data);
 	}
 
 	/**
@@ -29,7 +27,8 @@ class BrandsController extends Controller {
 	 */
 	public function getCreate()
 	{
-		return \View::make('brands.create');
+		$data['brands'] = Brand::all();
+		return \View::make('products.create',$data);
 	}
 
 	/**
@@ -39,10 +38,11 @@ class BrandsController extends Controller {
 	 */
 	public function postStore()
 	{
-		$brand = new Brand;
-		$brand->name = $_REQUEST['name'];
-		$brand->save();
-		return \Redirect::to('brands');
+		$product = new Product;
+		$product->name = $_REQUEST['name'];
+		$product->brand_id = $_REQUEST['brand_id'];
+		$product->save();
+		return \Redirect::to('products');
 	}
 
 	/**

@@ -11,7 +11,7 @@
 					<div class="box-tools">
 						<div class="input-group">							
 							<div class="input-group-btn">
-								<a href="{{ url('brands/create') }}"><button class="btn btn-sm btn-default">Create New</button></a>
+								<a href="{{ url('products/create') }}"><button class="btn btn-sm btn-default">Create New</button></a>
 							</div>
 						</div>
 					</div>
@@ -20,14 +20,14 @@
 					<table class="table table-hover">
 						<tr>
 							<th>ID</th>
-							<th>Name</th>
-							<th>Products Count</th>                      
+							<th>Product Name</th>
+							<th>Brand Name</th>                      
 						</tr>
-						@foreach($brands as $brand)
+						@foreach($products as $product)
 						<tr>
-							<td>{{ $brand->id }}</td>
-							<td>{{ $brand->name }}</td>
-							<td><span class="label label-success">{{ count($brand->products) }}</span></td>
+							<td>{{ $product->id }}</td>
+							<td>{{ $product->name }}</td>
+							<td>{{ $product->brands->name }}</td>
 						</tr>
 						@endforeach                    
 					</table>
