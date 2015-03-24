@@ -2,6 +2,10 @@
 
 @section('content')
 <h2>Brands</h2>
+
+<div>
+	<a href="{{ url('brands/create') }}">Create New</a>
+</div>
 <table border='1'>
 	<tr>
 		<th>Id</th>
