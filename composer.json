@@ -9,8 +9,8 @@
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
-		"phpspec/phpspec": "~2.1"
-        //"rcrowe/twigbridge": "0.7.*"
+		"phpspec/phpspec": "~2.1",
+                "rcrowe/twigbridge": "0.7.*"
 	},
 
   "minimum-stability": "dev",
